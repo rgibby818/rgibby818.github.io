@@ -53,6 +53,18 @@ body {
   border-bottom: 2px solid #eee;
 }
 
+img {
+  object-fit: fill;
+  height: 200px;
+  width: 400px;
+}
+@media (max-width: 450px) {
+  img {
+    height: 150px;
+    width: 300px;
+  }
+}
+
 /* Project and Education entries */
 .entry {
   margin-bottom: 1.5rem;
@@ -82,10 +94,30 @@ body {
     list-style: inside;
     margin-left: 1rem;
 }
+.entry-list-project {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .entry-list-item {
     font-size: smaller;
     font-weight:900;
+}
+
+.entry-project-item {
+  list-style: none;
+  margin: 5px;
+}
+.entry-project-item:nth-child(2) {
+  margin-left: 1rem;
+}
+
+@media (max-width: 900px) {
+  .entry-list-project {
+    flex-direction: column;
+    margin: 0;
+  }
 }
 
 /* Technical Skills section */
